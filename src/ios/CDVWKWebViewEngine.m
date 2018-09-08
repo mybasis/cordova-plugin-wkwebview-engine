@@ -283,6 +283,11 @@ static void * KVOContext = &KVOContext;
     }
 
     wkWebView.allowsBackForwardNavigationGestures = [settings cordovaBoolSettingForKey:@"AllowBackForwardNavigationGestures" defaultValue:NO];
+ 
+    wkWebView.allowsLinkPreview = [settings cordovaBoolSettingForKey:@"AllowLinkPreview" defaultValue:NO];
+ 
+    wkWebView.scrollView.showsVerticalScrollIndicator = [settings cordovaBoolSettingForKey:@"ScrollBarEnabled" defaultValue:NO];
+    wkWebView.scrollView.showsHorizontalScrollIndicator = [settings cordovaBoolSettingForKey:@"ScrollBarEnabled" defaultValue:NO];
 }
 
 - (void)updateWithInfo:(NSDictionary*)info
